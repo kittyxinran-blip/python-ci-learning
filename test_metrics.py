@@ -3,6 +3,9 @@ from metrics import conversion_rate
 
 
 class ConversionRateTests(unittest.TestCase):
+    def test_ten_percent(self):
+        self.assertEqual(conversion_rate(50, 5), 10.0)
+
     def test_normal_conversion(self):
         self.assertEqual(conversion_rate(200, 10), 5.0)
 
